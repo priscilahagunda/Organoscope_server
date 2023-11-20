@@ -1,0 +1,156 @@
+*{
+z-index: 1;
+scroll-behavior: smooth;
+box-sizing: border-box;
+}
+html{
+    scroll-padding-top: var(--scroll-paddding,100px) ;
+    width:100vw;
+    overflow-x: hidden;
+}
+::selection{
+background-color: rgba(67, 110, 17,0.8);
+color: #FFF;
+}
+a{
+outline:none;
+}
+section:nth-child(odd){
+    background-color: #f5f2f2;
+}
+.video-docker video {
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.video-docker::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.6);
+z-index: 1;
+}
+
+.video-content {
+z-index: 2;
+}
+nav{
+position: absolute;
+}
+.nav-scrolled{
+position:fixed;
+width: 100%;
+background: white;
+color:black;
+top:0;
+left:0;
+right:0;
+animation: nav-appear;
+animation-duration: 1s;
+animation-iteration-count: 1;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav-scrolled .nav-links{
+color:#3f3e2a;
+}
+.nav-links.active {
+position: relative;
+}
+.nav-links.active::after{
+content: " ";
+width:100%;
+position: absolute;
+bottom:0;
+left:0;
+border-bottom: solid 2px #fff;
+}
+.nav-scrolled .nav-links.active::after{
+border-color: #436e11;
+}
+@keyframes nav-appear{
+from{top:-100%}
+to{top:0}
+}
+img{
+object-fit: cover;
+object-position: 50% 50%;
+}
+.bg-green{
+background-color: #436e11;
+}
+.bg-light-green{
+background-color: #a7b623;
+}
+.border-lime{
+border-color: #a7b623;
+}
+
+.text-lime{
+color: #a7b623;
+}
+.text-green{
+color: #436e11;
+}
+.text-brown{
+color:#3f3e2a;
+}
+.split-screen{
+display: flex;
+flex-wrap: wrap;
+}
+.split-screen>*{
+flex: 1 1 15em;
+}
+
+/* who */
+.who-img{
+height: 70vh;
+object-fit:cover;
+object-position: 50% 50%;
+max-width: 100%;
+}
+/* team section */
+.team-card{
+overflow: hidden;
+position: relative;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.team-card:hover,
+.team-card:focus {
+transition-duration: .5s;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#modal-bg{
+position: fixed; 
+overflow: hidden;/* Sit on top of the page content */ /* Hidden by default */
+width: 100%; /* Full width (cover the whole page) */
+height: 100vh; /* Full height (cover the whole page) */
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0,0, 0, 0.75);
+
+}
+.modal-team-background{
+overflow-y: scroll;
+height: 10em;
+}
+/* footer */
+.border-gray-700{
+background-color: transparent;
+border: 1px solid rgba(0,0, 0, 0.5);
+}
+
+.footer-social{
+transition-duration: .25s;
+}
+.footer-social:hover,
+.footer-social:focus{
+background-color: #FFF;
+color: #436e11;
+transition-duration: .25s;
+}
