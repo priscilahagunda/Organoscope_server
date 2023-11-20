@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://kit.fontawesome.com/c5d17fdd58.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <style></style>
+    <title>Organo scope LTD</title>
+</head>
+<body>
+    <div id="button" class="hidden container mx-auto flex justify-center items-center px-4 md:px-10 py-20">
+        <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+        <button onclick="openModal()" class="bg-white text-gray-800 py-5 px-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white rounded">Open Modal</button>
+      </div>
+      <div id="modal" class="container mx-auto flex justify-center items-center px-4 md:px-10 py-20">
+        <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+        <div class="bg-white shadow-xl px-3 md:px-4 py-12 flex flex-col justify-center items-center">
+          <div>
+            <img src="media/logo.svg" loading="eager" class="w-16" alt="">
+          </div>
+          <h1 class="mt-8 md:mt-12 text-[#436e11]  text-3xl lg:text-4xl font-semibold leading-10 text-center text-center md:w-9/12 lg:w-7/12 ">Message sent successfully</h1>
+          <p class="mt-10 text-base leading-normal text-center text-gray-600 md:w-9/12 lg:w-7/12">Our team will get in touch with you soon</p>
+          <div class="mt-12 md:mt-14 w-full flex justify-center">
+            <button onclick="closeModal()" class=" w-full sm:w-auto border border-gray-800 text-base font-medium text-gray-800 py-5 px-14 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-800 hover:text-white ">Back home</button>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      const closeModal = () => {
+        window.location.href='index.html';
+      };
+      </script>
+</body>
+</html>
